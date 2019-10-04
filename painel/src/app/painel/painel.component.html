@@ -15,7 +15,7 @@
             <i class="fas fa-plus-circle"></i> Add </a>
         </li>
 
-        
+
 
         <li class="nav-item">
           <a class="nav-link" routerLink="" routerLinkActive="">
@@ -32,21 +32,39 @@
 <div class="container">
 
 
-    <div class="row justify-content-center">
-        <h4>Sensores Cadastrados</h4>
-        
-      </div>
-      <div class="d-flex justify-content-end">
-        <button routerLink="/painel">
-            <i class="fas fa-sync-alt"></i> </button>
-    </div>
+
+
+
+  <div class="row justify-content-center">
+    <h4>Sensores Cadastrados</h4>
+
+  </div>
+
+
+
+  <div class="d-flex justify-content-end">
+    <button routerLink="/painel">
+      <i class="fas fa-sync-alt"></i> </button>
+  </div>
+
+  <div class="form-group">
+    <label for="sel1"  >Selecione nome do cliente: </label>
+    <select class="form-control" [(ngModel)]="modelPainel.nome" (change)="consulta()" name="painel">
+      <option> Pai </option>
+      <option> Filho </option>
+      <option> Teste </option>
+      <option> teste </option>
+    </select>
+</div>
+
+
   <table class="table table-striped">
-    
+
     <thead>
-      
+
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Cliente</th>
+
         <th scope="col">Name Sensor</th>
         <th scope="col">MAC</th>
       </tr>
@@ -54,19 +72,17 @@
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Admin</td>
         <td>Teste</td>
         <td>FF:FF:FF:FF:FF:FF</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Jacob</td>
         <td>Thornton</td>
         <td>@fat</td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Larry</td>
+
         <td>the Bird</td>
         <td>@twitter</td>
       </tr>

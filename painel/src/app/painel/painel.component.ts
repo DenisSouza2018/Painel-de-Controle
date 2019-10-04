@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Painel } from '../painel';
+
+
 
 @Component({
   selector: 'app-painel',
@@ -9,7 +12,13 @@ export class PainelComponent implements OnInit {
 
   constructor() { }
 
+  modelPainel= new Painel('');
+
   ngOnInit() {
+  }
+
+  consulta(){
+    console.log(this.modelPainel)
   }
 
 }
