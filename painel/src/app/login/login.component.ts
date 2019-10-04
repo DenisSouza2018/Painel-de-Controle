@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Login } from '../login';
+
+
 
 @Component({
   selector: 'app-login',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  dadosLogin = new Login('','');
+  
   constructor() { }
 
   ngOnInit() {
   }
 
+  
+
+
+  valida(){
+
+    console.log(this.dadosLogin)
+   
+
+
+  }
 }

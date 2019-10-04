@@ -29,48 +29,30 @@
   </div>
 </nav>
 
-<div class="container">
 
+<div class="container ">
 
-    <div class="row justify-content-center">
-        <h4>Sensores Cadastrados</h4>
-        
-      </div>
-      <div class="d-flex justify-content-end">
-        <button routerLink="/painel">
-            <i class="fas fa-sync-alt"></i> </button>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputSensor">Nome do sensor</label>
+      <input type="text" class="form-control" [(ngModel)]="modelDados.name" name="nome" placeholder="Enter name sensor">
+      <small class="form-text text-muted">Pode ser um apelido.</small>
     </div>
-  <table class="table table-striped">
-    
-    <thead>
+
+    <div class="form-group">
+      <label for="exampleInputMac">MAC do sensor</label>
+      <input type="text" class="form-control" [(ngModel)]="modelDados.mac" name="mac" placeholder="Enter com MAC">
       
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Cliente</th>
-        <th scope="col">Name Sensor</th>
-        <th scope="col">MAC</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Admin</td>
-        <td>Teste</td>
-        <td>FF:FF:FF:FF:FF:FF</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+      <small class="form-text text-muted">Exemplo: FF:FF:FF:FF:FF:FF:FF.</small>
+    </div>
+
+    <button  class="btn btn-primary" (click)="cadastro()" >Cadastrar</button>  <br/><br/>
+    <div *ngIf="modelDados.confirma == true" class="alert alert-secondary" role="alert">
+        Sensor Cadastrado
+    </div>
+    
+    <button  class="btn btn-primary" routerLink="/painel" >Finalizar</button>
+  </form>
+
 
 </div>

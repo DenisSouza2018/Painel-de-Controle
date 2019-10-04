@@ -4,32 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+ 
 </head>
 <body>
   
 </body>
 </html>
 
-<div class="login-form">
-  <div class="form-header">
-    
-    <div class="title">Login</div>
+
+
+  <div class="login-form" >
+    <div class="form-header">
+      
+      <div class="title">Login</div>
+    </div>
+    <div class="form-container">
+      <div class="form-element">
+        <label class="fa fa-user" for="login-username"></label>
+        <input type="text" [(ngModel)]="dadosLogin.name" name="username">
+      </div>
+      <div class="form-element">
+        <label class="fa fa-key" for="login-password"></label>
+        <input type="password"   [(ngModel)]="dadosLogin.password" name="password">
+      </div>
+      <div class="form-element">
+        <button  routerLink="/painel" (click)="valida()" >Login</button>
+      </div>
+      <div class="form-element forgot-link">
+        <a href="#">Forgot password?</a>
+      </div>
+    </div>
   </div>
-  <div class="form-container">
-    <div class="form-element">
-      <label class="fa fa-user" for="login-username"></label>
-      <input type="text" id="login-username" placeholder="Username">
-    </div>
-    <div class="form-element">
-      <label class="fa fa-key" for="login-password"></label>
-      <input type="text" id="login-password" placeholder="Password">
-    </div>
-    <div class="form-element">
-      <button>Login</button>
-    </div>
-    <div class="form-element forgot-link">
-      <a href="#">Forgot password?</a>
-    </div>
-  </div>
-</div>
+
